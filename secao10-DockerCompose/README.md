@@ -1,18 +1,18 @@
-Mão na massa - "Disponibilizando stack em microserviço usando Compose"
+# Mão na massa - "Disponibilizando stack em microserviço usando Compose"
 
-# 1 - Caso ainda não tenho feito, clone meu repositório público com todos os materiais utilizados nos meus cursos ministrados na Udemy:
+## 1 - Caso ainda não tenho feito, clone meu repositório público com todos os materiais utilizados nos meus cursos ministrados na Udemy:
 
 git clone https://github.com/ricardoferreiracosta08/cursos-udemy.git
 
-# 2 - Navegue em:
+## 2 - Navegue em:
 
 /curso-dockerdozero/secao10-DockerCompose/example-voting-app/
 
-# 3 - Nesse diretório tem uma app de exemplo de microserviços configurada para compose. Sua stack é arquitetada da seguinte maneira:
+## 3 - Nesse diretório tem uma app de exemplo de microserviços configurada para compose. Sua stack é arquitetada da seguinte maneira:
 
 ![image](https://user-images.githubusercontent.com/102634295/163898632-b92ec449-64b8-475c-be4b-62b7ede1891e.png)
 
-##Em resumo, essa app é:
+### Em resumo, essa app é:
 
     Um aplicativo Web front-end em Python (Linux) ou ASP.NET Core (Windows) que permite votar entre duas opções (porta 5000)
 
@@ -24,15 +24,15 @@ git clone https://github.com/ricardoferreiracosta08/cursos-udemy.git
 
     Um aplicativo web Node.js ou ASP.NET Core SignalR que mostra os resultados da votação em tempo real (porta 5001)
 
-# 4 - Para vê em execução, dentro desse diretório, execute o compose para Linux
+## 4 - Para vê em execução, dentro desse diretório, execute o compose para Linux
 
 docker-compose -f docker-compose.yml up
 
-# 5 - Caso queira para Windows, execute:
+## 5 - Caso queira para Windows, execute:
 
 docker-compose -f docker-compose-windows.yml up
 
-# 6 - No browser, acesse http://localhost:5000 para "votação" e http://localhost:5001 para "resultado"
+## 6 - No browser, acesse http://localhost:5000 para "votação" e http://localhost:5001 para "resultado"
 
 
 Forked
