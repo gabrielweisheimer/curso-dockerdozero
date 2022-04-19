@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+ mysql:
+  container_name: mysql
+  image: mysql:5.5
+  restart: always
+  networks:
+   - net-backend
+  volumes:
+    - "/etc/dados/data:/var/lib/mysql"
+    - "/etc/localtime:/etc/localtime:ro"
+  environment:
+   MYSQL_ROOT_PASSWORD: pass
+   MYSQL_DATABASE: owncloud
+   MYSQL_USER: owncloud
+   MYSQL_PASSWORD: owncloud
+
+ owncloud:
+  depends_on: 
+   - mysql
+  container_name: owncloud
+  image: owncloud
+  restart: always
+  networks:
+   - net-backend
+  ports:
+   - 9090:80
+  volumes:
+   - "/etc/dados/apps:/var/www/html/apps" 
+   - "/etc/dados/config:/var/www/html/config"
+   - "/etc/dados/data-owncloud:/var/www/html/data"
+   - "/etc/localtime:/etc/localtime:ro"
+    
+
+networks:
+    net-backend:
+
+ 
