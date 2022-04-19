@@ -20,6 +20,8 @@ A fim de obter melhor entendimento sobre a manipulação do arquivo de configura
 
 ### 1. Qual conteúdo de arquivo de configuração Docker Compose melhor pode representar o o cenário apresentado?
 
+./docker-compose.yaml
+
 ### 2. Após a entrega do serviço, quais valores dos parâmetros, para conexão com a base MySQL, devem ser utilizados na configuração/instalação do Owncloud:
 
 - Usuário de banco de dados
